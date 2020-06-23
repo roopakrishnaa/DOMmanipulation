@@ -1,1 +1,41 @@
 <!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Fix the Code</title>
+    </head>
+    <body>
+    
+    <script type="text/javascript">
+    
+            function button() 
+            {
+                var b1 = document.getElementById('b1');
+                var b2 = document.getElementById('b2');
+                var b3 = document.getElementById('b3');
+
+                if(b1.onclick="button();")
+                {
+                    document.getElementById('text').innerHTML = "You pressed button 1";
+                }
+
+                if(b2.onlick="button();")
+                {
+                    document.getElementById('text').innerHTML = "You pressed Button 2";
+                }
+                
+                if(b3.onlick="button();")
+                {
+                    document.getElementById('text').innerHTML = "You pressed Button 3";
+                }
+
+            }
+        </script>
+
+        <input type="button" value="Button 1" id="b1" onclick="button();"/>
+        <input type="button" value="Button 2" id="b2" onclick="button();"/>
+        <input type="button" value="Button 3" id="b3" onclick="button();"/>
+
+        <p id="text">Click on a Button</p>
+    </body>
+</html>
